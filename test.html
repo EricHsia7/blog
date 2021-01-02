@@ -189,7 +189,7 @@ var mdurl = 'https://erichsia7.github.io/blog/markdown/01.md' ;
             url:mdurl,
             dataType:"html",
             success:function(res){
-            $("#content").append(marked(res));
+            $('p').append(marked(res));
             }
         })
     })
