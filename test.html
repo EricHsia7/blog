@@ -180,11 +180,20 @@ $('p').css({'font-size': 25*$('.fontsizerange').val()/2 + 'px'});
 $('t').css({'font-size': 35*$('.fontsizerange').val()/2 + 'px'});
 }
 $( document ).ready(function() {
-
 document.getElementById('t').innerHTML = document.getElementById('title').innerHTML ;
 
-});
-
+var mdurl = 'https://erichsia7.github.io/blog/markdown/01.md' ;
+        $(function(){
+        $.ajax({
+            type:"get",
+            url:mdurl,
+            dataType:"html",
+            success:function(res){
+            $("#content").append(marked(res));
+            }
+        })
+    })
+  });
 </script>
 </div>
 <div class="post">
