@@ -188,7 +188,7 @@ var mdid = url.searchParams.get('id') ;
             url:'https://erichsia7.github.io/blog/markdown/' + mdid + '.md' ,
             dataType:"html",
             success:function(res){
-            $('p').append(marked(res));
+            $('p').html(marked(res));
             }
         })
     })
